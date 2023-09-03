@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamatoDaiwaCS_Extensions", "YamatoDaiwaCS_Extensions.csproj", "{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Japanese", "OfficialLocalizations\Japanese\Japanese.csproj", "{3B04A278-FE83-41AB-8592-609C34F8527D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94D65D8E-645F-4B24-A7CD-FC39581C9FA1} = {94D65D8E-645F-4B24-A7CD-FC39581C9FA1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Russian", "OfficialLocalizations\Russian\Russian.csproj", "{C467623C-0B8F-4CB1-898D-F832288C5B38}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94D65D8E-645F-4B24-A7CD-FC39581C9FA1} = {94D65D8E-645F-4B24-A7CD-FC39581C9FA1}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94D65D8E-645F-4B24-A7CD-FC39581C9FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B04A278-FE83-41AB-8592-609C34F8527D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B04A278-FE83-41AB-8592-609C34F8527D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B04A278-FE83-41AB-8592-609C34F8527D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B04A278-FE83-41AB-8592-609C34F8527D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C467623C-0B8F-4CB1-898D-F832288C5B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C467623C-0B8F-4CB1-898D-F832288C5B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C467623C-0B8F-4CB1-898D-F832288C5B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C467623C-0B8F-4CB1-898D-F832288C5B38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5218834-B2C4-4FDD-9EA5-42F432E52554}
+	EndGlobalSection
+EndGlobal
