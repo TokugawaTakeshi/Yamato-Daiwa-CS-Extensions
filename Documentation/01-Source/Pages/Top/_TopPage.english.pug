@@ -1,0 +1,61 @@
+extends ../../../node_modules/@yamato-daiwa/programming_documentation/Layouts/Minimal/MinimalLayout.pug
+
+
+block append Requirements
+
+  include ../../SharedComponents/SharedComponents.english.pug
+  include ../../SharedAssets/Markup/SharedAssets.english.pug
+
+
+block append Metadata
+
+  -
+
+    HTML_PAGE_LANGUAGE = "en";
+    HTML_PAGE_TITLE = buildHTML_PageTitle("Top page");
+    HTML_PageMetaData = {
+      description:
+          "&quot;Yamato Daiwa CS(harp) extensions&quot; (abbreviation: &quot;YDSCE&quot;) is a library for the " +
+            "&quot;C Sharp&quot; language extending of standard classes such as (&quot;String&quot; and  &quot;List&quot;) " +
+            "and also suggesting the additional auxiliary functionality. " +
+          "The methods names, parameters, etc. has been designed so that you don't need documentation to understand " +
+            "what the code is doing.",
+      author: HTML_PAGE_AUTHOR
+    };
+
+    FAVICON_URI = "@MustBeInPublicRoot/favicon.ico";
+
+    styleSheetsURIs = [ "@Shared/CommonStyles", "@Layouts/Minimal/MinimalLayout", "@Shared/ExternalComponents", "@Pages/Top/TopPage" ];
+    scriptsURIs.endOfBody = [ "@Common" ];
+
+    RoutingEmulator.setCurrentRoute("top");
+
+    LanguageDropDownList__YDF_DK.setLinks({
+      japanese: "./Top/TopPage.japanese.html",
+      russian: "./Top/TopPage.russian.html"
+    });
+
+
+block append HeadScriptsLinks
+
+  if __IS_PRODUCTION_BUILDING_MODE__
+
+    +GoogleAnalyticsScript
+
+
+block append SpecificContent
+
+  main.TopPage
+
+    .TopPage-ImageAndTopHeadingGroup
+
+      img.TopPage-ImageAndTopHeadingGroup-Image(
+        src="@Shared/Icons/YDCSE_Icon.svg"
+        alt="The icon of Yamato Daiwa CS(harp) Extensions libraries"
+      )
+
+      h1.TopPage-ImageAndTopHeadingGroup-Heading
+        span.TopPage-ImageAndTopHeadingGroup-Heading-FirstLine Yamato Daiwa
+        span.TopPage-ImageAndTopHeadingGroup-Heading-SecondLine CS(harp) Extensions
+
+    +CompactTableOfContents--YDF_DK(localizedRouting).TopPage-TableOfContents

@@ -1,0 +1,31 @@
+-
+
+  function generateLocalizedRouting(localization) {
+
+    const localizedRouting = {
+
+      top: {
+        $tableOfContentsTitle: localization.topPage.tableOfContentsTitle,
+        $URI: localization.topPage.URI
+      },
+
+      realiseNotes: {
+
+        $tableOfContentsTitle: localization.realiseNotes.tableOfContentsTitle,
+
+        $children: {
+
+          v0d1: {
+            $tableOfContentsTitle: "0.1",
+            $URI: `@All/RealiseNotes/v0d1/RealiseNotes-v0d1.${ localization.fileNameLocalizationExtensions }`
+          }
+
+        }
+
+      }
+
+    };
+
+    return localizedRouting;
+
+  }

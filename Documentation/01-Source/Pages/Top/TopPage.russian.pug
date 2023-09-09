@@ -1,0 +1,61 @@
+extends ../../../node_modules/@yamato-daiwa/programming_documentation/Layouts/Minimal/MinimalLayout.pug
+
+
+block append Requirements
+
+  include ../../SharedComponents/SharedComponents.russian.pug
+  include ../../SharedAssets/Markup/SharedAssets.russian.pug
+
+
+block append Metadata
+
+  -
+
+    HTML_PAGE_LANGUAGE = "ru";
+    HTML_PAGE_TITLE = buildHTML_PageTitle("Главная страница");
+    HTML_PageMetaData = {
+      description:
+          "«Yamato Daiwa CS(harp) extensions» (сокращённо: «YDCSE») — библиотека для языка «С Sharp»,  " +
+            "расширяющая стандартные классы (такие как «String» и «List») и предлагающая дополнительную вспомогательную " +
+            "функциональность." +
+          "Имена функций, параметров и так далее спроектированы так, чтобы при знании базового английского код был " +
+            "понятным и очевидным без обращения к документации.",
+      author: HTML_PAGE_AUTHOR
+    };
+
+    FAVICON_URI = "@MustBeInPublicRoot/favicon.ico"
+
+    styleSheetsURIs = [ "@Shared/CommonStyles", "@Layouts/Minimal/MinimalLayout", "@Shared/ExternalComponents", "@Pages/Top/TopPage" ];
+    scriptsURIs.endOfBody = [ "@Common" ];
+
+    RoutingEmulator.setCurrentRoute("top");
+
+    LanguageDropDownList__YDF_DK.setLinks({
+      english: "./../index.html",
+      japanese: "./TopPage.japanese.html"
+    });
+
+
+block append HeadScriptsLinks
+
+  if __IS_PRODUCTION_BUILDING_MODE__
+
+    +GoogleAnalyticsScript
+
+
+block append SpecificContent
+
+  main.TopPage
+
+    .TopPage-ImageAndTopHeadingGroup
+
+      img.TopPage-ImageAndTopHeadingGroup-Image(
+        src="@Shared/Icons/YDCSE_Icon.svg"
+        alt="Общий логотип библиотек Yamato Daiwa CS(harp) Extensions"
+      )
+
+      h1.TopPage-ImageAndTopHeadingGroup-Heading
+        span.TopPage-ImageAndTopHeadingGroup-Heading-FirstLine Yamato Daiwa
+        span.TopPage-ImageAndTopHeadingGroup-Heading-SecondLine CS(harp) Extensions
+
+    +CompactTableOfContents--YDF_DK(localizedRouting).TopPage-TableOfContents

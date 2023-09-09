@@ -1,0 +1,61 @@
+extends ../../../node_modules/@yamato-daiwa/programming_documentation/Layouts/Minimal/MinimalLayout.pug
+
+
+block append Requirements
+
+  include ../../SharedComponents/SharedComponents.japanese.pug
+  include ../../SharedAssets/Markup/SharedAssets.japanese.pug
+
+
+block append Metadata
+
+  -
+
+    HTML_PAGE_LANGUAGE = "ja";
+    HTML_PAGE_TITLE = buildHTML_PageTitle("トップ");
+    HTML_PageMetaData = {
+      description:
+          "「Yamato Daiwa CS(harp) Extensions」（略：YDCSE）は、「String」や「List」の様に標準クラスの拡大メソッドやその他の補助機能を提供するライブラリ。" +
+          "関数名や引数名を和訳すれば、説明書を見ずともコードの動作が判る様に設計されている。",
+      author: HTML_PAGE_AUTHOR
+    };
+
+    FAVICON_URI = "@MustBeInPublicRoot/favicon.ico";
+
+    styleSheetsURIs = [ "@Shared/CommonStyles", "@Layouts/Minimal/MinimalLayout", "@Shared/ExternalComponents", "@Pages/Top/TopPage" ];
+    scriptsURIs.endOfBody = [ "@Common" ];
+
+    RoutingEmulator.setCurrentRoute("top");
+
+    LanguageDropDownList__YDF_DK.setLinks({
+      english: "./../index.html",
+      russian: "./TopPage.russian.html"
+    });
+
+
+block append HeadScriptsLinks
+
+  if __IS_PRODUCTION_BUILDING_MODE__
+
+    +GoogleAnalyticsScript
+
+
+block append SpecificContent
+
+  main.TopPage
+
+    .TopPage-ImageAndTopHeadingGroup
+
+      img.TopPage-ImageAndTopHeadingGroup-Image(
+        src="@Shared/Icons/YDCSE_Icon.svg"
+        alt="「Yamato Daiwa CS Extensions」ライブラリの共通のロゴタイプ"
+      )
+
+      h1.TopPage-ImageAndTopHeadingGroup-Heading
+        span.TopPage-ImageAndTopHeadingGroup-Heading-FirstLine Yamato Daiwa
+        span.TopPage-ImageAndTopHeadingGroup-Heading-SecondLine CSharp Extensions
+
+    p.TopPage-ShortDescription-Heading.
+      C#開発者専用ネイティブメソッド及び其の他の補助機能のライブラリ
+
+    +CompactTableOfContents--YDF_DK(localizedRouting).TopPage-TableOfContents
