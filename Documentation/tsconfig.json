@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "baseUrl": "./",
+    "paths": {},
+
+  },
+
+  "ts-node": {
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  }
+
+}
