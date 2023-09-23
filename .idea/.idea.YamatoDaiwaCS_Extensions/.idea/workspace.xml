@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1bca4466-54e7-4381-b7c5-3f721644c719" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Documentation/.idea/.icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/Pages/Top/TopPage.japanese.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/Pages/Top/TopPage.russian.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/Pages/Top/_TopPage.english.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/Images/Icons/YDCSE_Icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/Images/Icons/YDCSE_Icon__White.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/Images/MainVisual.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/Markup/Localizations/English/MetaDescriptionTemplates.english.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/Markup/Localizations/Japanese/MetaDescriptionTemplates.japanese.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/Markup/Localizations/Russian/MetaDescriptionTemplates.russian.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/Markup/ThirdPartyEmbeddableScripts/GoogleAnalyticsScript.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedAssets/MustBeInPublicRoot/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedComponents/External/LanguageDropDownList.styl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedComponents/OnePerPage/Footer.styl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Documentation/01-Source/SharedComponents/OnePerPage/Header.styl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.YamatoDaiwaCS_Extensions/.idea/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DateTimeExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.YamatoDaiwaCS_Extensions/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.YamatoDaiwaCS_Extensions/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/YamatoDaiwaCS_Extensions.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/YamatoDaiwaCS_Extensions.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +18,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DateOnlyExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DateTimeExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -42,26 +38,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "RiderNuGetOptionsPageId",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Takeshi Tokugawa\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Takeshi Tokugawa\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Takeshi Tokugawa\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Takeshi Tokugawa\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Takeshi Tokugawa\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
+      "C:\\Users\\Takeshi Tokugawa\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,6 +70,7 @@
       <workItem from="1693715454141" duration="1237000" />
       <workItem from="1694241446810" duration="657000" />
       <workItem from="1694921627256" duration="19000" />
+      <workItem from="1695448750294" duration="1446000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize repository">
       <option name="closed" value="true" />
