@@ -22,3 +22,11 @@
 * `ReplaceArrayElementsByPredicate`
   * `List<TElement> ReplaceArrayElementsByPredicate<TElement>(Func<TElement, bool> predicate, TElement newElement, bool mustReplaceOnlyFirstOne)`
   * `List<TElement> ReplaceArrayElementsByPredicate<TElement>(Func<TElement, bool> predicate, Func<TElement, TElement> replacer, bool mustReplaceOnlyFirstOne)`
+
+
+## Extensions of `String` class
+
+* `bool IsNonEmpty()`
+* `string ToUpperCamelCase()`
+* `string ToLowerCamelCase()`
+* `string RemoveAllSpecifiedCharacters(char[] charactersToRemove)`

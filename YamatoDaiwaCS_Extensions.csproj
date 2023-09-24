@@ -8,7 +8,7 @@
     <Title>Yamato Daiwa CS Extensions</Title>
     <Description>General utilities like additional "String" or "DateOnly" methods which are missing in standard classes.</Description>
     <RepositoryUrl>https://github.com/TokugawaTakeshi/Yamato-Daiwa-CS-Extensions.git</RepositoryUrl>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <PackageIcon>NuGetProjectIcon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
@@ -16,6 +16,7 @@
   <ItemGroup>
     <Compile Remove="%2a%2a\**" />
     <Compile Include="ListExtensions.cs" />
+    <Compile Include="StringExtensions.cs" />
     <EmbeddedResource Remove="%2a%2a\**" />
     <None Remove="%2a%2a\**" />
   </ItemGroup>
