@@ -15,7 +15,15 @@
   
   <ItemGroup>
     <Compile Remove="%2a%2a\**" />
+    <Compile Include="DataMocking\DataMocking.cs" />
+    <Compile Include="DataMocking\MockGatewayHelper.cs" />
+    <Compile Include="DataMocking\MockGatewayHelperEnglishLocalization.cs" />
+    <Compile Include="DateOnlyExtensions.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="Exceptions\DataRetrievingFailedException.cs" />
+    <Compile Include="Exceptions\DataSubmittingFailedException.cs" />
     <Compile Include="ListExtensions.cs" />
+    <Compile Include="RandomValuesGenerator.cs" />
     <Compile Include="StringExtensions.cs" />
     <EmbeddedResource Remove="%2a%2a\**" />
     <None Remove="%2a%2a\**" />
