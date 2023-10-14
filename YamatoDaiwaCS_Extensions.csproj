@@ -20,6 +20,7 @@
     <Compile Include="DataMocking\MockGatewayHelperEnglishLocalization.cs" />
     <Compile Include="DateOnlyExtensions.cs" />
     <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="EmailAddress.cs" />
     <Compile Include="Exceptions\DataRetrievingFailedException.cs" />
     <Compile Include="Exceptions\DataSubmittingFailedException.cs" />
     <Compile Include="ListExtensions.cs" />
