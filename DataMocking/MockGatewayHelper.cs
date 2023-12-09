@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Text.Json;
+﻿using System.Text.Json;
 using YamatoDaiwaCS_Extensions.Exceptions;
 
 
@@ -9,8 +8,8 @@ namespace YamatoDaiwaCS_Extensions.DataMocking;
 public abstract class MockGatewayHelper
 {
 
-  private const ushort MINIMAL_PENDING_PERIOD__SECONDS = 1;
-  private const ushort MAXIMAL_PENDING_PERIOD__SECONDS = 2;
+  protected const ushort MINIMAL_PENDING_PERIOD__SECONDS = 1;
+  protected const ushort MAXIMAL_PENDING_PERIOD__SECONDS = 2;
 
   
   public struct SimulationOptions
@@ -22,6 +21,17 @@ public abstract class MockGatewayHelper
     public required string GatewayName { get; init; }
     public required string TransactionName { get; init; }
   }
+
+  
+  /* ━━━ Logging ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  public delegate void Log(string message);
+
+  protected static Log log;
+
+  public static void SetLogger(Log log)
+  {
+    MockGatewayHelper.log += log;
+  }
   
 
   /* ━━━ Localization ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
@@ -30,19 +40,19 @@ public abstract class MockGatewayHelper
 
     public abstract class ErrorSimulationCompletedLog
     {
-      public struct TemplateParameters
+      public struct TemplateVariables
       {
         public required string GatewayName { get; init; }
         public required string TransactionName { get; init; }
       }
     }
     
-    public Func<ErrorSimulationCompletedLog.TemplateParameters, string> GenerateErrorSimulationCompletedLog { get; }
+    public Func<ErrorSimulationCompletedLog.TemplateVariables, string> GenerateErrorSimulationCompletedLog { get; }
 
 
     public abstract class DataRetrievingSimulationCompletedLog
     {
-      public struct TemplateParameters
+      public struct TemplateVariables
       {
         public required string GatewayName { get; init; }
         public required string TransactionName { get; init; }
@@ -51,12 +61,12 @@ public abstract class MockGatewayHelper
       }
     }
     
-    public Func<DataRetrievingSimulationCompletedLog.TemplateParameters, string> GenerateDataRetrievingSimulationCompletedLog { get; }
+    public Func<DataRetrievingSimulationCompletedLog.TemplateVariables, string> GenerateDataRetrievingSimulationCompletedLog { get; }
     
     
     public abstract class DataSubmittingSimulationCompletedLog
     {
-      public struct TemplateParameters
+      public struct TemplateVariables
       {
         public required string GatewayName { get; init; }
         public required string TransactionName { get; init; }
@@ -65,7 +75,7 @@ public abstract class MockGatewayHelper
       }
     }
     
-    public Func<DataSubmittingSimulationCompletedLog.TemplateParameters, string> GenerateDataSubmittingSimulationCompletedLog { get; }
+    public Func<DataSubmittingSimulationCompletedLog.TemplateVariables, string> GenerateDataSubmittingSimulationCompletedLog { get; }
     
   }
 
@@ -93,7 +103,7 @@ public abstract class MockGatewayHelper
     {
       throw new DataRetrievingFailedException(
         Localization.GenerateErrorSimulationCompletedLog(
-          new ILocalization.ErrorSimulationCompletedLog.TemplateParameters
+          new ILocalization.ErrorSimulationCompletedLog.TemplateVariables
           {
             GatewayName = options.GatewayName,
             TransactionName = options.TransactionName
@@ -105,9 +115,9 @@ public abstract class MockGatewayHelper
 
     TResponseData responseData = getResponseData();
 
-    Debug.WriteLine(
-      Localization.GenerateDataRetrievingSimulationCompletedLog(
-        new ILocalization.DataRetrievingSimulationCompletedLog.TemplateParameters
+    MockGatewayHelper.log(
+      MockGatewayHelper.Localization.GenerateDataRetrievingSimulationCompletedLog(
+        new ILocalization.DataRetrievingSimulationCompletedLog.TemplateVariables
         {
           GatewayName = options.GatewayName,
           TransactionName = options.TransactionName,
@@ -147,7 +157,7 @@ public abstract class MockGatewayHelper
     {
       throw new DataSubmittingFailedException(
         Localization.GenerateErrorSimulationCompletedLog(
-          new ILocalization.ErrorSimulationCompletedLog.TemplateParameters
+          new ILocalization.ErrorSimulationCompletedLog.TemplateVariables
           {
             GatewayName = options.GatewayName,
             TransactionName = options.TransactionName
@@ -159,9 +169,9 @@ public abstract class MockGatewayHelper
 
     TResponseData responseData = getResponseData();
 
-    Debug.WriteLine(
+    MockGatewayHelper.log(
       Localization.GenerateDataSubmittingSimulationCompletedLog(
-        new ILocalization.DataSubmittingSimulationCompletedLog.TemplateParameters()
+        new ILocalization.DataSubmittingSimulationCompletedLog.TemplateVariables()
         {
           GatewayName = options.GatewayName,
           TransactionName = options.TransactionName,

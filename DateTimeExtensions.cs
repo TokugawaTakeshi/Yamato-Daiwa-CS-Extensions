@@ -4,7 +4,7 @@
 public static class DateTimeExtensions
 {
   
-  public static DateTime createDateTimeFromISO8601_String(string ISO8601_String) {
+  public static DateTime CreateDateTimeFromISO8601_String(string ISO8601_String) {
     return DateTime.Parse(ISO8601_String, null, System.Globalization.DateTimeStyles.RoundtripKind);
   }
 

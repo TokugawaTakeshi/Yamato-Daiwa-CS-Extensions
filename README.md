@@ -122,6 +122,17 @@ When mock the asynchronous data transactions, takes care about such routines as
 
 
 ### Public static methods
+#### `SetLogger`
+
+```csharp
+void SetLogger(Log log)
+    
+delegate void Log(string message) 
+```
+
+Adds the logging method which will be invoked if the logging will be demanded in other methods.
+
+
 #### `SimulateDataRetrieving`
 
 ```csharp

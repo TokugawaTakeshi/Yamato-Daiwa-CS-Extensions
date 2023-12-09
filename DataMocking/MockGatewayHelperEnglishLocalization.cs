@@ -4,16 +4,16 @@
 public struct MockGatewayHelperEnglishLocalization: MockGatewayHelper.ILocalization
 {
 
-  public Func<MockGatewayHelper.ILocalization.ErrorSimulationCompletedLog.TemplateParameters, string>
+  public Func<MockGatewayHelper.ILocalization.ErrorSimulationCompletedLog.TemplateVariables, string>
       GenerateErrorSimulationCompletedLog =>
-          (MockGatewayHelper.ILocalization.ErrorSimulationCompletedLog.TemplateParameters templateParameters) =>
+          (MockGatewayHelper.ILocalization.ErrorSimulationCompletedLog.TemplateVariables templateParameters) =>
               $"Class \"MockGatewayHelper\" has simulated the error for the transaction " +
                   $"\"{templateParameters.GatewayName}.{templateParameters.TransactionName}\" because the option " +
                   $"\"MustSimulateError\" has been set to true.";
 
-  public Func<MockGatewayHelper.ILocalization.DataRetrievingSimulationCompletedLog.TemplateParameters, string> 
+  public Func<MockGatewayHelper.ILocalization.DataRetrievingSimulationCompletedLog.TemplateVariables, string> 
       GenerateDataRetrievingSimulationCompletedLog =>
-          (MockGatewayHelper.ILocalization.DataRetrievingSimulationCompletedLog.TemplateParameters templateParameters) =>
+          (MockGatewayHelper.ILocalization.DataRetrievingSimulationCompletedLog.TemplateVariables templateParameters) =>
               $"\"{ templateParameters.GatewayName }.{ templateParameters.TransactionName }\", " + 
                 "the simulation of the data retrieving has complete.\n" +
               "The \"MockGatewayHelper\" class has finished the simulation of the data retrieving " +
@@ -29,9 +29,9 @@ public struct MockGatewayHelperEnglishLocalization: MockGatewayHelper.ILocalizat
                        "" 
                 );
 
-  public Func<MockGatewayHelper.ILocalization.DataSubmittingSimulationCompletedLog.TemplateParameters, string> 
+  public Func<MockGatewayHelper.ILocalization.DataSubmittingSimulationCompletedLog.TemplateVariables, string> 
       GenerateDataSubmittingSimulationCompletedLog =>
-          (MockGatewayHelper.ILocalization.DataSubmittingSimulationCompletedLog.TemplateParameters templateParameters) =>
+          (MockGatewayHelper.ILocalization.DataSubmittingSimulationCompletedLog.TemplateVariables templateParameters) =>
               $"\"{ templateParameters.GatewayName }.{ templateParameters.TransactionName }\", " + 
                 "the simulation of the data submitting has complete.\n" +
               "The \"MockGatewayHelper\" class has finished the simulation of the data submitting " +
