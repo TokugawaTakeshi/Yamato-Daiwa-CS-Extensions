@@ -1,9 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <PackageId>YamatoDaiwaCS_Extensions.Localizations.Japanese</PackageId>
+    <Title>Yamato Daiwa CS Extensions - Japanese localization</Title>
+    <RootNamespace>YamatoDaiwaCS_Extensions.OfficialLocalizations.Japanese</RootNamespace>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Description>The Japanese localization for "Yamato Daiwa CS Extensions" library.</Description>
+    <RepositoryUrl>https://github.com/TokugawaTakeshi/Yamato-Daiwa-CS-Extensions.git</RepositoryUrl>
+    <Version>0.0.3</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\YamatoDaiwaCS_Extensions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+  
 </Project>
