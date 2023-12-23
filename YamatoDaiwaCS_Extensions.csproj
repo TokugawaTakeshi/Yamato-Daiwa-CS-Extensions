@@ -1,16 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <Title>Yamato Daiwa CS(harp) Extensions</Title>
+    <Description>General utilities like additional "String" or "DateOnly" methods which are missing in standard classes.</Description>
+    <Version>0.0.7</Version>
+    <RootNamespace>YamatoDaiwa.CSharpExtensions</RootNamespace>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Yamato Daiwa CS Extensions</Title>
-    <Description>General utilities like additional "String" or "DateOnly" methods which are missing in standard classes.</Description>
     <RepositoryUrl>https://github.com/TokugawaTakeshi/Yamato-Daiwa-CS-Extensions.git</RepositoryUrl>
-    <Version>0.0.5</Version>
     <PackageIcon>NuGetProjectIcon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   
   <ItemGroup>

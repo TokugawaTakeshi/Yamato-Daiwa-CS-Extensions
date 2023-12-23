@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
 
-namespace YamatoDaiwaCS_Extensions.OfficialLocalizations.Japanese;
+namespace YamatoDaiwa.CSharpExtensions.OfficialLocalizations.Japanese;
 
 
 public class JapanesePhoneNumber

@@ -1,6 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace YamatoDaiwaCS_Extensions;
+
+namespace YamatoDaiwa.CSharpExtensions;
 
 
 public abstract class EmailAddress

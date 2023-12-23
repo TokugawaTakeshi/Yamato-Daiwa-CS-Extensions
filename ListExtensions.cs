@@ -1,4 +1,4 @@
-﻿namespace YamatoDaiwaCS_Extensions;
+﻿namespace YamatoDaiwa.CSharpExtensions;
 
 
 public static class ListExtensions
