@@ -2,7 +2,7 @@
 using YamatoDaiwaCS_Extensions.Exceptions;
 
 
-namespace YamatoDaiwaCS_Extensions.DataMocking;
+namespace YamatoDaiwa.CSharpExtensions.DataMocking;
 
 
 public abstract class MockGatewayHelper

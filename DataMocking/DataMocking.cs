@@ -1,4 +1,4 @@
-﻿namespace YamatoDaiwaCS_Extensions.DataMocking;
+﻿namespace YamatoDaiwa.CSharpExtensions.DataMocking;
 
 
 public abstract class DataMocking

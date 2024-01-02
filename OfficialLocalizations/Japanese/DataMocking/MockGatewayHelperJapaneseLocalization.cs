@@ -1,7 +1,7 @@
-﻿using YamatoDaiwaCS_Extensions.DataMocking;
+﻿using YamatoDaiwa.CSharpExtensions.DataMocking;
 
 
-namespace YamatoDaiwaCS_Extensions.OfficialLocalizations.Japanese.DataMocking;
+namespace YamatoDaiwa.CSharpExtensions.OfficialLocalizations.Japanese.DataMocking;
 
 
 public struct MockGatewayHelperJapaneseLocalization: MockGatewayHelper.ILocalization
