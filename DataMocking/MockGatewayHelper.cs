@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using YamatoDaiwaCS_Extensions.Exceptions;
+using YamatoDaiwa.CSharpExtensions.Exceptions;
 
 
 namespace YamatoDaiwa.CSharpExtensions.DataMocking;

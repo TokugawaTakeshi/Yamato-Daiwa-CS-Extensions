@@ -1,4 +1,4 @@
-﻿namespace YamatoDaiwaCS_Extensions.Exceptions;
+﻿namespace YamatoDaiwa.CSharpExtensions.Exceptions;
 
 
 public class DataRetrievingFailedException : Exception

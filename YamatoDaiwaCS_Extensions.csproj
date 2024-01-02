@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Title>Yamato Daiwa CS(harp) Extensions</Title>
     <Description>General utilities like additional "String" or "DateOnly" methods which are missing in standard classes.</Description>
-    <Version>0.0.7</Version>
+    <Version>0.0.8</Version>
     <RootNamespace>YamatoDaiwa.CSharpExtensions</RootNamespace>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
