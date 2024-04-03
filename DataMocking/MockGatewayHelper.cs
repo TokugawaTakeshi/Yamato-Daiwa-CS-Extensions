@@ -26,9 +26,9 @@ public abstract class MockGatewayHelper
   /* ━━━ Logging ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   public delegate void Log(string message);
 
-  protected static Log log;
+  protected static Log? log;
 
-  public static void SetLogger(Log log)
+  public static void SetLogger(Log? log)
   {
     MockGatewayHelper.log += log;
   }
@@ -115,7 +115,7 @@ public abstract class MockGatewayHelper
 
     TResponseData responseData = getResponseData();
 
-    MockGatewayHelper.log(
+    MockGatewayHelper.log?.Invoke(
       MockGatewayHelper.Localization.GenerateDataRetrievingSimulationCompletedLog(
         new ILocalization.DataRetrievingSimulationCompletedLog.TemplateVariables
         {
@@ -169,7 +169,7 @@ public abstract class MockGatewayHelper
 
     TResponseData responseData = getResponseData();
 
-    MockGatewayHelper.log(
+    MockGatewayHelper.log?.Invoke(
       Localization.GenerateDataSubmittingSimulationCompletedLog(
         new ILocalization.DataSubmittingSimulationCompletedLog.TemplateVariables()
         {

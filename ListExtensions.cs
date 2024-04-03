@@ -4,21 +4,52 @@
 public static class ListExtensions
 {
 
-  public static List<TElement> AddElementsToEnd<TElement> (
+  /* ━━━ AddElementsToStart ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  public static List<TElement> AddElementsToStart<TElement> (
     this List<TElement> self,
     params TElement[] newElements
-  ) {
-
+  )
+  {
+    
     foreach (TElement element in newElements)
     {
-      self.Add(element);   
+      self.Insert(0, element);   
     }
-
+    
     return self;
-
+    
   }
   
   
+  /* ━━━ AddElementsToEnd ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  public static List<TElement> AddElementsToEnd<TElement> (
+    this List<TElement> self,
+    params TElement[] newElements
+  )
+  {
+    self.AddRange(newElements);
+    return self;
+  }
+  
+  
+  /* ━━━ AddElementToEndIfNotNull ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  public static List<TElement?> AddElementToEndIfNotNull<TElement>(
+    this List<TElement?> self,
+    TElement? newElement
+  )
+  {
+    
+    if (newElement is not null)
+    {
+      self.Add(newElement);
+    }
+    
+    return self;
+    
+  }
+  
+  
+  /* ━━━ AddElementToEndIf ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   public static List<TElement> AddElementToEndIf<TElement>(
     this List<TElement> self,
     TElement newElement,
@@ -52,6 +83,7 @@ public static class ListExtensions
   }
   
 
+  /* ━━━ StringifyEachElementAndJoin ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   public static string StringifyEachElementAndJoin<TElement>(
     this List<TElement> self,
     string separator
@@ -61,6 +93,7 @@ public static class ListExtensions
   }
 
 
+  /* ━━━ ReplaceArrayElementsByPredicate ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
   public static List<TElement> ReplaceArrayElementsByPredicate<TElement>(
     this List<TElement> self,
     Func<TElement, bool> predicate,
@@ -116,6 +149,27 @@ public static class ListExtensions
       
     return self;
       
+  }
+  
+  
+  /* ━━━ LogEachElement ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+  public static List<TElement> LogEachElement<TElement>(
+    this List<TElement> self,
+    Action<TElement>? logger = null
+  )
+  {
+
+    ArgumentNullException.ThrowIfNull(self);
+
+    logger ??= element => Console.WriteLine(element);
+
+    foreach (TElement element in self)
+    {
+      logger(element);
+    }
+
+    return self;
+    
   }
   
 }

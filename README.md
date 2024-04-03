@@ -35,9 +35,24 @@ Contains the regular expression of the valid email address according
 * `bool IsValid(string potentialEmail)`
 
 
+### `Array`
+
+* `TElement[] LogEachElement<TElement>(Action<TElement>? logger = null)`
+
+
+### `Dictionary`
+
+* `Dictionary<TKey, TValue> SetPairIfValueNotIsNull<TKey, TValue>`
+* `SetPairIf`
+  * `Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(TKey key, TValue value, bool condition) where TKey : notnull`
+  * `Dictionary<TKey, TValue> SetPairIf<TKey, TValue>(TKey key, TValue value, Func<TKey, TValue, bool> condition) where TKey : notnull`
+
+
 ### `List`
 
+* `List<TElement> AddElementsToStart<TElement> (params TElement[] newElements)`
 * `List<TElement> AddElementsToEnd<TElement> (params TElement[] newElements) `
+* `List<TElement?> AddElementToEndIfNotNull<TElement>(TElement? newElement)`
 * `AddElementToEndIf`
   * `List<TElement> AddElementToEndIf<TElement>(TElement newElement, bool condition)`
   * `List<TElement> AddElementToEndIf<TElement>(TElement newElement, Func<TElement?, bool> condition)`
@@ -45,6 +60,12 @@ Contains the regular expression of the valid email address according
 * `ReplaceArrayElementsByPredicate`
   * `List<TElement> ReplaceArrayElementsByPredicate<TElement>(Func<TElement, bool> predicate, TElement newElement, bool mustReplaceOnlyFirstOne)`
   * `List<TElement> ReplaceArrayElementsByPredicate<TElement>(Func<TElement, bool> predicate, Func<TElement, TElement> replacer, bool mustReplaceOnlyFirstOne)`
+* `List<TElement> LogEachElement<TElement>(Action<TElement>? logger = null)` 
+
+
+### `Number`
+
+* `bool IsValueOfAnyNumericType(object value)`
 
 
 ### `String`

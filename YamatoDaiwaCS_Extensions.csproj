@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Title>Yamato Daiwa CS(harp) Extensions</Title>
     <Description>General utilities like additional "String" or "DateOnly" methods which are missing in standard classes.</Description>
-    <Version>0.0.8</Version>
+    <Version>0.0.9</Version>
     <RootNamespace>YamatoDaiwa.CSharpExtensions</RootNamespace>
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
@@ -17,16 +17,19 @@
   
   <ItemGroup>
     <Compile Remove="%2a%2a\**" />
+    <Compile Include="ArrayExtensions.cs" />
+    <Compile Include="DateOnlyExtensions.cs" />
+    <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="DictionaryExtensions.cs" />
+    <Compile Include="EmailAddress.cs" />
+    <Compile Include="ListExtensions.cs" />
+    <Compile Include="NumberExtensions.cs" />
+    <Compile Include="RandomValuesGenerator.cs" />
     <Compile Include="DataMocking\DataMocking.cs" />
     <Compile Include="DataMocking\MockGatewayHelper.cs" />
     <Compile Include="DataMocking\MockGatewayHelperEnglishLocalization.cs" />
-    <Compile Include="DateOnlyExtensions.cs" />
-    <Compile Include="DateTimeExtensions.cs" />
-    <Compile Include="EmailAddress.cs" />
     <Compile Include="Exceptions\DataRetrievingFailedException.cs" />
     <Compile Include="Exceptions\DataSubmittingFailedException.cs" />
-    <Compile Include="ListExtensions.cs" />
-    <Compile Include="RandomValuesGenerator.cs" />
     <Compile Include="StringExtensions.cs" />
     <EmbeddedResource Remove="%2a%2a\**" />
     <None Remove="%2a%2a\**" />
