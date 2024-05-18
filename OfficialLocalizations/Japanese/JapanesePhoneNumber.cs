@@ -9,12 +9,12 @@ public class JapanesePhoneNumber
 
   public const byte DIGITS_COUNT_IN_TWO_LAST_PORTIONS_DIVIDED_BY_NDASH = 4;
 
-  public static readonly Regex VALID_PATTERN__WIHTOUT_DASHES = new(@"^\d{10,11}$"); 
+  public static readonly Regex VALID_PATTERN__WITHOUT_DASHES = new(@"^\d{10,11}$"); 
   
   public static string Format(string phoneNumber)
   {
     
-    string phoneNumber__digitsOnly = phoneNumber.RemoveAllSpecifiedCharacters(new[] {'-'});
+    string phoneNumber__digitsOnly = phoneNumber.RemoveAllSpecifiedCharacters(['-']);
     int firstNDashPosition = phoneNumber__digitsOnly.Length % JapanesePhoneNumber.DIGITS_COUNT_IN_TWO_LAST_PORTIONS_DIVIDED_BY_NDASH;
     int secondNDashPosition = firstNDashPosition + JapanesePhoneNumber.DIGITS_COUNT_IN_TWO_LAST_PORTIONS_DIVIDED_BY_NDASH;
 
@@ -26,8 +26,8 @@ public class JapanesePhoneNumber
 
   public static bool IsValid(string potentialJapanesePhoneNumber)
   {
-    return JapanesePhoneNumber.VALID_PATTERN__WIHTOUT_DASHES.IsMatch(
-      potentialJapanesePhoneNumber.RemoveAllSpecifiedCharacters(new[] {'-'})
+    return JapanesePhoneNumber.VALID_PATTERN__WITHOUT_DASHES.IsMatch(
+      potentialJapanesePhoneNumber.RemoveAllSpecifiedCharacters(['-'])
     );
   }
   

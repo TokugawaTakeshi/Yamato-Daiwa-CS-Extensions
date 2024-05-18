@@ -38,7 +38,7 @@ bool IsValid(string potentialJapanesePhoneNumber)
 
 
 #### 読み込み専用静的フィルド
-##### `VALID_PATTERN__WIHTOUT_DASHES`
+##### `VALID_PATTERN__WITHOUT_DASHES`
 
 | Key　 | Value　        |
 |------|---------------|

@@ -4,15 +4,16 @@
     <PackageId>YamatoDaiwaCS_Extensions.Localizations.Japanese</PackageId>
     <Title>Yamato Daiwa CS(harp) Extensions - Japanese localization</Title>
     <Description>The Japanese localization for "Yamato Daiwa CS(harp) Extensions" library.</Description>
-    <Version>0.0.4</Version>
+    <Version>0.1.0</Version>
     <RootNamespace>YamatoDaiwa.CSharpExtensions.OfficialLocalizations.Japanese</RootNamespace>
-    <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <RepositoryUrl>https://github.com/TokugawaTakeshi/Yamato-Daiwa-CS-Extensions.git</RepositoryUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+    <LangVersion>13</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

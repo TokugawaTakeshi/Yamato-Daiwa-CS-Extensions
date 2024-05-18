@@ -4,7 +4,7 @@
 namespace YamatoDaiwa.CSharpExtensions.OfficialLocalizations.Japanese.DataMocking;
 
 
-public struct MockGatewayHelperJapaneseLocalization: MockGatewayHelper.ILocalization
+public record MockGatewayHelperJapaneseLocalization: MockGatewayHelper.ILocalization
 {
 
   public Func<MockGatewayHelper.ILocalization.ErrorSimulationCompletedLog.TemplateVariables, string>
